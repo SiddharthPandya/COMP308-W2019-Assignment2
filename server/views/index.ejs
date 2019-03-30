@@ -1,38 +1,37 @@
 <% include ./partials/header.ejs %>
 
-    <div class="container">
-      <div class="jumbotron">
-      
-      
+<div class="container">
+  <div class="jumbotron">
 
-        <% if (title == "Home") { %>
-                  <h1 class="display-4 text-center"><b>Welcome to E-Portfolio</b></h1><br>
+    <% if (title == "Home") { %>
+    <h1 class="display-4 text-center"><b>Welcome to E-Portfolio</b></h1><br>
 
-      <p class="text-center">This website provides you details about my knowledge, skills and projects that I have worked upon.</p>
+    <p class="text-center">This website provides you details about my knowledge, skills and projects that I have worked
+      upon.</p>
 
-      <h2 class="text-center"><u>Mission Statement</u></h2><br>
+    <h2 class="text-center"><u>Mission Statement</u></h2><br>
 
-      <p class="text-center">Third year software engineering student with extensive knowledge in object-oriented 
-      software design, Software Development Life Cycle (SDLC), and web application development. 
-      Fluent in English with excellent communication and interpersonal skills. Fast learner who is efficient and 
-      capable of excelling in fast-paced environment with strong time management skills. 
-      Experienced in troubleshooting and debugging code with an analytical mind-set. Reliable team player with 
+    <p class="text-center">Third year software engineering student with extensive knowledge in object-oriented
+      software design, Software Development Life Cycle (SDLC), and web application development.
+      Fluent in English with excellent communication and interpersonal skills. Fast learner who is efficient and
+      capable of excelling in fast-paced environment with strong time management skills.
+      Experienced in troubleshooting and debugging code with an analytical mind-set. Reliable team player with
       exceptional work ethic in a team as well as individual setting.<br><br>
       <!-- Link to about me which contains my introduction and resume -->
       <a href="/about" class="btn btn-dark">Click Here to Know More About Me</a>
-      </p>
-        <% } %>
-
-      
-        <% if (title == "Contact") { %>
-          <h1 class="text-center"><b><%= title %></b></h1>
-        <% } %>
+    </p>
+    <% } %>
 
 
-        <% if ((title == "Contact") && (displayName == "Siddharth")) { %>
-          <a class="btn btn-primary" href="/contact-list" role="button">Contact List</a>
-        <% } %>
-      </div>
-    </div>
+    <% if (title == "Contact") { %>
+    <h1 class="text-center"><b><%= title %></b></h1>
+    <% } %>
+
+
+    <% if ((title == "Contact") && (displayName == "Siddharth")) { %>
+    <a class="btn btn-primary" href="/contact-list" role="button">Contact List</a>
+    <% } %>
+  </div>
+</div>
 
 <% include ./partials/footer.ejs %>

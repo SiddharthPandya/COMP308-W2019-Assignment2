@@ -1,5 +1,6 @@
 let express = require('express');
 let router = express.Router();
+let jwt = require('jsonwebtoken');
 
 // create a reference to the db schema
 let contactModel = require('../models/contact');
@@ -12,21 +13,14 @@ module.exports.displayContactList = (req, res, next) =>{
         else {
            // console.log(contactList);
 
-            res.render('contacts/index', {
-                title: 'Contact List',
-                contactList: contactList,
-                displayName: req.user ? req.user.displayName : ""
-            });
+           res.json({success: true, msg: 'Contact List Displayed Successfully!', contactList: contactList, user: req.user});
             
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('contacts/add', {
-        title: 'Add New Contact',
-        displayName: req.user ? req.user.displayName : ""
-    });
+    res.json({success: true, msg: 'Successfully Displayed Add Page!'});
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -43,8 +37,7 @@ module.exports.processAddPage = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the contact list
-            res.redirect('/contact-list');
+            res.json({success: true, msg: 'Successfully Added New Contact!'});
         }
     });
 }
@@ -60,11 +53,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             // show the edit view
-            res.render('contacts/edit', {
-                title: 'Edit Contact',
-                contact: contactObject,
-                displayName: req.user ? req.user.displayName : ""
-            });
+            res.json({success: true, msg: 'Successfully Displayed Contact to Edit!', contact: contactObject});
         }
     });
 }
@@ -85,8 +74,7 @@ module.exports.processEditPage = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the contact list
-            res.redirect('/contact-list');
+            res.json({success: true, msg: 'Successfully Edited Contact!', contact: updatedContact});
         }
     })
 }
@@ -100,8 +88,7 @@ module.exports.performDelete = (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the contact list
-            res.redirect('/contact-list');
+            res.json({success: true, msg: 'Successfully Deleted Contact!'});
         }
     });
 }
