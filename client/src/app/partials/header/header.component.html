@@ -1,0 +1,69 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: Orange;">
+  <a class="navbar-brand" routerLink="/"><img src="../Assets/images/Logo2.png" width="70px" height="65px"/></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      
+    <li class="nav-item active">
+
+      <a class="nav-link" routerLink="/"><i class="fa fa-lg fa-h-square"></i> Home </a>
+
+    </li>
+
+    
+      
+        <li class="nav-item">
+ 
+
+      <a class="nav-link" routerLink="/projects"><i class="fa fa-lg fa-tasks"></i> Projects</a>
+
+    </li>
+
+    
+      
+        <li class="nav-item">
+
+      <a class="nav-link" routerLink="/services"><i class="fa fa-lg fa-suitcase"></i> Services</a>
+
+    </li>
+
+    
+        <li class="nav-item">
+
+      <a class="nav-link" routerLink="/about"><i class="fa fa-lg fa-info-circle"></i> About Me</a>
+
+    </li>
+
+
+
+      <li class="nav-item">
+
+        <a class="nav-link" routerLink="/contact"
+          ><i class="fa fa-lg fa-phone"></i> Contact</a
+        >
+      </li>
+
+<!-- <li class="navbar-text"><i class="fas fa-lg fa-user"></i> 
+          Welcome, <%= displayName %></li> 
+        -->
+        
+        <li class="nav-item"><a routerLink="/logout" class="nav-link">
+          <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+  
+        <li class="nav-item"><a routerLink="/login" class="nav-link">
+          <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+     
+    </ul>
+  </div>
+</nav>

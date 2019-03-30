@@ -98,8 +98,9 @@ passport.use(strategy);
 
 app.use('/api', indexRouter);
 app.use('/api/contact-list', contactRouter); //TODO: protect this section
-
-// TODO: need to capture random links or incorrect URL information
+app.get('*', (req,res) => {
+  res.sendfile(path.join(__dirname,'../../public/index.html'));
+});
 
 
 // catch 404 and forward to error handler
