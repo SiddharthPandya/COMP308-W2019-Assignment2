@@ -1,3 +1,8 @@
+/*   FileName: header.component.ts
+     Student: Siddharth Pandya
+     Student ID: 300915041
+     Date: 03/04/2019 */
+
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { FlashMessagesService } from 'angular2-flash-messages';

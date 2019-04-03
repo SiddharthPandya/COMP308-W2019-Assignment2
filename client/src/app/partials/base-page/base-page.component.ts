@@ -1,3 +1,8 @@
+/*   FileName: base-page.component.ts (Client)
+     Student: Siddharth Pandya
+     Student ID: 300915041
+     Date: 03/04/2019 */
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
